@@ -101,3 +101,30 @@ body{
         transform: translateY(100vh);
     }
 }
+
+@media (max-width: 768px) {
+    .container .circle {
+        width: 250px; /* Giảm kích thước vòng tròn */
+        height: 250px;
+        top: 15%; /* Đưa vòng tròn lên trên */
+    }
+
+    .container .circle::before {
+        inset: -120px -150px; /* Điều chỉnh vị trí Santa */
+        background-size: 300px; /* Giảm kích thước Santa */
+    }
+
+    .container .circle::after {
+        position: absolute;
+        top: 110%; /* Đặt văn bản bên dưới vòng tròn */
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1em; /* Giảm kích thước chữ */
+        line-height: 1.5; /* Tăng khoảng cách giữa các dòng */
+        text-align: center;
+        color: #fff;
+        white-space: pre-wrap; /* Đảm bảo xuống dòng khi cần */
+        word-wrap: break-word; /* Chia dòng nếu quá dài */
+    }
+    
+}
